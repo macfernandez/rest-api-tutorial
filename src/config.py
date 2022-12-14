@@ -1,11 +1,10 @@
 import os
-#import pathlib
 import connexion
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 
+
 basedir = os.path.abspath('.')
-#basedir = pathlib.Path(__name__).parent.resolve()
 connex_app = connexion.App(__name__, specification_dir=basedir)
 
 app = connex_app.app
