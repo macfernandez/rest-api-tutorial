@@ -1,4 +1,4 @@
-# Python REST APIs With Flask, Connexion, and SQLAlchemy
+# Python REST APIs With Flask, Connexion, and SQLAlchemy, by Philipp Acsany
 
 Code built following Real Python tutorials:
 
@@ -6,9 +6,29 @@ Code built following Real Python tutorials:
 - [Python REST APIs With Flask, Connexion, and SQLAlchemy – Part 2](https://realpython.com/flask-connexion-rest-api-part-2/)
 - [Python REST APIs With Flask, Connexion, and SQLAlchemy – Part 3](https://realpython.com/flask-connexion-rest-api-part-3/)
 
+Some modificationes were made:
 
-[Python and REST APIs: Interacting With Web Services](https://realpython.com/api-integration-in-python/)
+- source code was placed in [`src`](./src/) folder instead of root folder
+- docstrings in [numpydoc format](https://numpydoc.readthedocs.io/en/latest/format.html) were added
+- type hints were added
 
-[Primer on Jinja Templating](https://realpython.com/primer-on-jinja-templating/)
+For using this code, follow next steps:
 
-[HTTP response status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+1. Create an environment
+2. Install project requirements:
+
+    ```bash
+    pip install -r requirements
+    ```
+
+3. Create the database:
+
+    ```bash
+    python build_database.py
+    ```
+
+4. Run the API:
+
+    ```bash
+    python -m src
+    ```
