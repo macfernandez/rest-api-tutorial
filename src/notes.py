@@ -1,7 +1,7 @@
 from flask import abort, make_response
 
-from config import db
-from models import Note, Person, note_schema
+from src.config import db
+from src.models import Note, Person, note_schema
 
 
 def create(note):

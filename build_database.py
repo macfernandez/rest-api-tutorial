@@ -1,7 +1,7 @@
 from datetime import datetime
 
-from config import app, db
-from models import Person, Note
+from src.config import app, db
+from src.models import Person, Note
 
 
 PEOPLE_NOTES = [

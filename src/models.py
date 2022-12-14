@@ -1,7 +1,7 @@
 from datetime import datetime
 from marshmallow_sqlalchemy import fields
 
-from config import db, ma
+from src.config import db, ma
 
 
 class Note(db.Model):
