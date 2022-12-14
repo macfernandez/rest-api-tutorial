@@ -1,7 +1,9 @@
 import os
+from flask import render_template
+
 import config
 from models import Person
-from flask import render_template
+
 
 app = config.connex_app
 app.add_api(os.path.join(config.basedir, "swagger.yml"))
