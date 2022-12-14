@@ -11,6 +11,10 @@ app.add_api(os.path.join(config.basedir, "swagger.yml"))
 
 @app.route("/")
 def home():
+    """
+    Description.
+    
+    """
     people = Person.query.all()
     print(os.listdir('.'))
     return render_template("home.html", people=people)

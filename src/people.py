@@ -6,6 +6,10 @@ from src.models import Person, people_schema, person_schema
 
 
 def create(person: Dict[str,str]) -> Tuple[Dict[str,str],int]:
+    """
+    Description.
+    
+    """
     lname = person.get("lname")
     existing_person = Person.query.filter(Person.lname == lname).one_or_none()
 
@@ -22,6 +26,10 @@ def create(person: Dict[str,str]) -> Tuple[Dict[str,str],int]:
 
 
 def delete(lname: str) -> str:
+    """
+    Description.
+    
+    """
     existing_person = Person.query.filter(Person.lname == lname).one_or_none()
 
     if existing_person:
@@ -36,11 +44,19 @@ def delete(lname: str) -> str:
 
 
 def read_all() -> List[Dict[str,str]]:
+    """
+    Description.
+    
+    """
     people = Person.query.all()
     return people_schema.dump(people)
 
 
 def read_one(lname: str) -> Dict[str,str]:
+    """
+    Description.
+    
+    """
     person = Person.query.filter(Person.lname == lname).one_or_none()
     if person is not None:
         return person_schema.dump(person)
@@ -51,8 +67,11 @@ def read_one(lname: str) -> Dict[str,str]:
 
 
 def update(lname: str, person: Dict[str,str]) -> Dict[str,str]:
+    """
+    Description.
+    
+    """
     existing_person = Person.query.filter(Person.lname == lname).one_or_none()
-
     if existing_person:
         update_person = person_schema.load(person, session=db.session)
         existing_person.fname = update_person.fname

@@ -5,6 +5,10 @@ from src.config import db, ma
 
 
 class Note(db.Model):
+    """
+    Description.
+
+    """
     __tablename__ = "note"
     id = db.Column(db.Integer, primary_key=True)
     person_id = db.Column(db.Integer, db.ForeignKey("person.id"))
@@ -15,6 +19,10 @@ class Note(db.Model):
 
 
 class NoteSchema(ma.SQLAlchemyAutoSchema):
+    """
+    Description.
+
+    """
     class Meta:
         model = Note
         load_instance = True
@@ -23,6 +31,10 @@ class NoteSchema(ma.SQLAlchemyAutoSchema):
     
 
 class Person(db.Model):
+    """
+    Description.
+    
+    """
     __tablename__ = "person"
     id = db.Column(db.Integer, primary_key=True)
     lname = db.Column(db.String(32), unique=True)
@@ -40,6 +52,10 @@ class Person(db.Model):
 
 
 class PersonSchema(ma.SQLAlchemyAutoSchema):
+    """
+    Description.
+    
+    """
     class Meta:
         model = Person
         load_instance = True

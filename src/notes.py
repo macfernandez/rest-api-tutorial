@@ -5,6 +5,10 @@ from src.models import Note, Person, note_schema
 
 
 def create(note):
+    """
+    Description.
+    
+    """
     person_id = note.get("person_id")
     person = Person.query.get(person_id)
 
@@ -21,6 +25,10 @@ def create(note):
 
 
 def delete(note_id):
+    """
+    Description.
+    
+    """
     existing_note = Note.query.get(note_id)
 
     if existing_note:
@@ -32,6 +40,10 @@ def delete(note_id):
 
 
 def read_one(note_id):
+    """
+    Description.
+    
+    """
     note = Note.query.get(note_id)
 
     if note is not None:
@@ -41,7 +53,12 @@ def read_one(note_id):
             404, f"Note with ID {note_id} not found"
         )
 
+
 def update(note_id, note):
+    """
+    Description.
+    
+    """
     existing_note = Note.query.get(note_id)
 
     if existing_note:
